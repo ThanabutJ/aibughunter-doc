@@ -36,3 +36,39 @@ icon | string(icon) | |
 
 #### icon
 (string) "shield" | "document" | "compass"
+
+## Example
+example in javascript array
+
+```javascript
+[
+    {
+        title: "Write shoter file",
+        icon: "shield",
+        showRecommendTag: true,
+        score: 1,
+        recommendedScore: 2,
+        maxScore: 10,
+        type: "lsb",
+        unit: "MB",
+    },
+    {
+        title: "Reduce complexity",
+        icon: "document",
+        showRecommendTag: true,
+        score: 6,
+        recommendedScore: 4,
+        maxScore: 10,
+        type: "lsb",
+    },
+    {
+        title: "Increase Reviewer",
+        icon: "compass",
+        showRecommendTag: false,
+        score: 9,
+        recommendedScore: 4,
+        maxScore: 12,
+        type: "hsb",
+    },
+]
+```
