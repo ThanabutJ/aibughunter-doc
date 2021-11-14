@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /tags/*
 
-Sitemap: https://thanabutj.github.io/aibughunter-doc/sitemap.xml
+Sitemap: http://localhost/sitemap.xml
