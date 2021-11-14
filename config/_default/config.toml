@@ -1,4 +1,4 @@
-baseURL = "https://thanabutj.github.io/aibughunter-doc/"
+baseURL = "http://localhost/"
 title = "Aibughunter frontend doc"
 theme = "hugo-geekdoc"
 
