@@ -3,7 +3,7 @@ title: "Repository - File page"
 date: 2021-11-14T00:54:05+07:00
 ---
 
-[json file example](/example/page-repo-file.js "example file")
+[js file example](/example/page-repo-file.js "example file")
 
 ![page screenshot](/screenshots/page-repository-file.png "screenshot")
 
