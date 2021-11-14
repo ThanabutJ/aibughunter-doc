@@ -4,7 +4,7 @@ date: 2021-11-14T00:54:05+07:00
 draft: true
 ---
 
-[json file example](/json/file-detail.json "example file")
+[json file example](/example/page-repo-file.js "example file")
 
 ![page screenshot](/screenshots/page-repository-file.png "screenshot")
 
@@ -13,16 +13,26 @@ draft: true
 ```typescript
 type RepoFilePage{
     fileName: string;
-    grade: string;
+    fileType: string;
+    grade: Grade;
     sourceCode: string;
     lineWaring: LineWaring[];
-    Summary: FileSummary;
+    summary: FileSummary;
 }
 
 type FileSummary{
     stepMetric: StepMetric[];
 }
+
+type Grade = "A" | "B" | "C" | "D"
 ```
+
+### keys 
+#### fileType
+list of file types available [here](https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD)
+
+This will be determined by file extension in the future.
+
 
 types
 - [LineWarning](/types/line-warning)
