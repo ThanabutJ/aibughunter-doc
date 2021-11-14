@@ -1,7 +1,6 @@
 ---
 title: "Line Warning"
 date: 2021-11-14T01:22:14+07:00
-draft: true
 ---
 
 ```typescript
