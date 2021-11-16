@@ -1,40 +1,4 @@
----
-title: "File/Line Warning"
-date: 2021-11-14T01:22:14+07:00
----
-
-```typescript
-type FileWarning {
-    fileName: string;
-    fileType: string;
-    lineWarings: LineWarning[];
-}
-
-interface LineWarning {
-    line: number;
-    suggestions: Suggestion[];
-}
-
-interface Suggestion {
-    matchingStr: string;
-    fileName: string;
-    line: number;
-    description: string;
-    codeSuggestions: string[];
-}
-```
-
-## Example
-example in js array format
-
-```typescript
-const fileWarning: FileWarning = {
-    fileName:  "metrices_test.py",
-    fileType: "python",
-    lineWarnings: lineWarnings, //from variable below
-}
-
-const lineWarnings: LineWarning[] = [
+const lineWarningsExmaple: LineWarning[] = [
     {
         line: 4,
         suggestions: [
@@ -104,4 +68,52 @@ Donec vel scelerisque nulla. Nunc ante mi, pretium non ornare convallis, loborti
     },
 ];
 
-```
+const repoPRPageExample: RepoPRPage = {
+    topSection: {
+        title: "Plot legend missing when --resume_to_checkpoint #111",
+        priority: "high",
+        totalFileChange: 3,
+        totalWarning: 6,
+        totalLineChange: 6,
+    },
+    rawGitDiffOutPut: `raw_git_diff_output`, // output of git diff conmmand in terminal
+    fileWarnings: [
+        {
+            fileName: "metrices_test.py",
+            fileType: "python",
+            lineWarnings: lineWarningsExmaple,
+        },
+    ],
+    summary: {
+        stepMetric: [
+            {
+                title: "Write shoter file",
+                icon: "shield",
+                showRecommendTag: true,
+                score: 1,
+                recommendedScore: 2,
+                maxScore: 10,
+                type: "lsb",
+                unit: "MB",
+            },
+            {
+                title: "Reduce complexity",
+                icon: "document",
+                showRecommendTag: true,
+                score: 6,
+                recommendedScore: 4,
+                maxScore: 10,
+                type: "lsb",
+            },
+            {
+                title: "Increase Reviewer",
+                icon: "compass",
+                showRecommendTag: false,
+                score: 9,
+                recommendedScore: 4,
+                maxScore: 12,
+                type: "hsb",
+            },
+        ],
+    },
+};
