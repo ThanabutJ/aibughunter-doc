@@ -3,13 +3,12 @@ title: "Repository - File page"
 date: 2021-11-14T00:54:05+07:00
 ---
 
-[js file example](/example/page-repo-file.ts "example file")
-
 ![page screenshot](/screenshots/page-repository-file.png "screenshot")
 
-
-## typescript
+## JSON Object Types
+[RepoFilePage fs file example](/example/page-repo-file.ts "example file")
 ```typescript
+// Main object for the page
 type RepoFilePage{
     fileName: string;
     grade: Grade;
@@ -17,14 +16,30 @@ type RepoFilePage{
     summary: FileSummary;
     fileWarning: FileWarning;
 }
+```
 
+### Subtypes
+```typescript
 type FileSummary{
     stepMetric: StepMetric[];
 }
 
 type Grade = "A" | "B" | "C" | "D"
 ```
-> NOTE THAT any multiline string must be inside ` `` ` like example below
+### Keys 
+fileType
+list of file types available [here](https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD)
+
+This will be determined by file extension in the future.
+
+### Link to type references
+- [File/LineWarning](/types/line-warning)
+    - for type `FileWarning`
+- [StepMetric](/types/components/step-metric/)
+
+
+## NOTE
+> any multiline string must be inside ` `` ` like example below
 ```typescript
 const sourceCode = `
     const renderFile = ({oldRevision, newRevision, type, hunks}) => (
@@ -33,15 +48,3 @@ const sourceCode = `
     </Diff>
 );`
 ```
-
-### Keys 
-#### fileType
-list of file types available [here](https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_HLJS.MD)
-
-This will be determined by file extension in the future.
-
-
-## Ref types
-- [File/LineWarning](/types/line-warning)
-    - for type `FileWarning`
-- [StepMetric](/types/components/step-metric/)

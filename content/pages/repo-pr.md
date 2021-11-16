@@ -1,21 +1,25 @@
 ---
-title: "Repository - PR"
+title: "Repository - PR Page"
 date: 2021-11-14T00:54:05+07:00
 ---
 
-[js file example](/example/page-pr-file.ts "example file")
 
 ![page screenshot](/screenshots/page-repository-pr.png "screenshot")
 
-## typescript
+## JSON Object Types
+[RepoPRPage js file example](/example/page-pr-file.ts "example file")
 ```typescript
+// Main object for the page
 type RepoPRPage{
     topSection: TopSection;
     rawGitDiffOutput: string;    
     summary: FileSummary;
     fileWarnings: FileWarning[];
 }
+```
 
+### Subtypes
+```typescript
 type TopSection {
     title: string;
     priority: "high" | "medium" | "low";
@@ -27,10 +31,14 @@ type TopSection {
 type FileSummary{
     stepMetric: StepMetric[];
 }
-
 ```
+### Link to Other type 
+- [File/Line Warning](/types/line-warning)
+    - for type `FileWarning`
+- [StepMetric](/types/components/step-metric/)
 
-> NOTE THAT any multiline string must be inside ` `` ` like example below
+## NOTE
+> any multiline string must be inside ` `` ` like example below
 ```typescript
 const sourceCode = `
     const renderFile = ({oldRevision, newRevision, type, hunks}) => (
@@ -41,7 +49,3 @@ const sourceCode = `
 ```
 
 
-## Ref types
-- [File/Line Warning](/types/line-warning)
-    - for type `FileWarning`
-- [StepMetric](/types/components/step-metric/)
