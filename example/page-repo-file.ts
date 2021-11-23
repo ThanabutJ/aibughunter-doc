@@ -152,7 +152,7 @@ Donec vel scelerisque nulla. Nunc ante mi, pretium non ornare convallis, loborti
             ],
         },
     ],
-    summary: {
+    metricSummary: {
         stepMetric: [
             {
                 title: "Write shoter file",
