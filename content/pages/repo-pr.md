@@ -11,16 +11,16 @@ date: 2021-11-14T00:54:05+07:00
 ```typescript
 // Main object for the page
 type RepoPRPage{
-    topSection: TopSection;
+    pageSummary: PageSummary;
     rawGitDiffOutput: string;    
     summary: FileSummary;
-    fileWarnings: FileWarning[];
+    metricWarnings: MetricWarning[];
 }
 ```
 
 ### Subtypes
 ```typescript
-type TopSection {
+type PageSummary {
     title: string;
     priority: "high" | "medium" | "low";
     totalFileChange: number;
@@ -28,7 +28,7 @@ type TopSection {
     totalLineChange: number;
 }
 
-type FileSummary{
+type MetricSummary{
     stepMetric: StepMetric[];
 }
 ```

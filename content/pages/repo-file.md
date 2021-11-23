@@ -13,14 +13,14 @@ type RepoFilePage{
     fileName: string;
     grade: Grade;
     sourceCode: string;
-    summary: FileSummary;
+    metricSummary: MetricSummary;
     fileWarning: FileWarning;
 }
 ```
 
 ### Subtypes
 ```typescript
-type FileSummary{
+type MetricSummary{
     stepMetric: StepMetric[];
 }
 
