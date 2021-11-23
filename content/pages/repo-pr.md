@@ -8,6 +8,11 @@ date: 2021-11-14T00:54:05+07:00
 
 ## JSON Object Types
 [RepoPRPage js file example](/example/page-pr-file.ts "example file")
+
+**filewarnings**
+
+[FileWarning js file example](/example/page-pr-file-warning.ts "example file") and [FileWarning json file example](/example/page-pr-file-warning.ts "example file")
+
 ```typescript
 // Main object for the page
 type RepoPRPage{
