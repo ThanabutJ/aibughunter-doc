@@ -13,8 +13,8 @@ date: 2021-11-14T00:54:05+07:00
 type RepoPRPage{
     pageSummary: PageSummary;
     rawGitDiffOutput: string;    
-    summary: FileSummary;
-    metricWarnings: MetricWarning[];
+    metricSummary: MetricSummary;
+    fileWarnings: FileWarning[];
 }
 ```
 

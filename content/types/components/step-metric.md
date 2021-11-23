@@ -7,7 +7,7 @@ title: "Step Metric"
 ## typescript
 
 ```typescript
-export type StepMetric = {
+type StepMetric = {
   title: string;
   score: number;
   maxScore: number;

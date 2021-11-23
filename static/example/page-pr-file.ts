@@ -69,22 +69,23 @@ Donec vel scelerisque nulla. Nunc ante mi, pretium non ornare convallis, loborti
 ];
 
 const repoPRPageExample: RepoPRPage = {
-    topSection: {
+    pageSummary: {
         title: "Plot legend missing when --resume_to_checkpoint #111",
         priority: "high",
         totalFileChange: 3,
         totalWarning: 6,
         totalLineChange: 6,
     },
-    rawGitDiffOutPut: `raw_git_diff_output`, // output of git diff conmmand in terminal
+    rawGitDiffOutput: `raw_git_diff_output`, // output of git diff conmmand in terminal
     fileWarnings: [
         {
             fileName: "metrices_test.py",
             fileType: "python",
+            fileID: 15,
             lineWarnings: lineWarningsExmaple,
         },
     ],
-    summary: {
+    metricSummary: {
         stepMetric: [
             {
                 title: "Write shoter file",

@@ -4,7 +4,7 @@ date: 2021-11-14T01:22:14+07:00
 ---
 
 ```typescript
-type FileWarning {
+type FileWarning = {
     fileName: string;
     fileType: string;
     fileID: number;
